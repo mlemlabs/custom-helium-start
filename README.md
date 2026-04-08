@@ -20,5 +20,20 @@ While you can open the `index.html` directly, it is **better to host it locally*
 I decided against using a separate `config.json` to keep things simple for standard use in this public release. Using external JSON files would require you to run a web server to avoid browser security restrictions. By keeping the configuration inside `index.html`, you can use the file normally without extra setup, also explains why i did not build the project with its depends and why i'm using their cdns. (if you are a bit savy then you know how to easy build this yourself thats why this is opensource).
 
 ### Integration with Helium
-In the Helium settings on startup, you can point directly to the `index.html` file in this folder. All of your history and settings are stored in `localStorage`.
-OPTIONAL: If you want this page to open every time you click the **"+" (New Tab)** button in your browser, you can use a redirect extension like New Tab Redirect or Custom New Tab URL.
+
+In the Helium settings (`helium://settings/onStartup`), you can configure the app to open this project on startup.
+
+1. Click **"Add a new page"**.
+2. Set the **Site URL** to the path of the `index.html` file in this folder.
+
+   Example:
+   `C:\Users\User\Documents\Project Helium\index.html`
+   or if you are hosting it with python as example it would be
+   `localhost:8000` or 8080 depending on what you set the port
+
+All history data is stored in `localStorage`.
+
+3. To edit the search engine in use please visit index.html open it with an editor and go to line #94 and change Google to whichever one is listed under or you can add your own.
+
+**Optional:**  
+If you want this page to open every time you click the **"+" (New Tab)** button in your browser, you can use a redirect extension such as *New Tab Redirect* or *Custom New Tab URL*.
