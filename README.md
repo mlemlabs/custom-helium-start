@@ -1,3 +1,5 @@
+<img width="1385" height="933" alt="image" src="https://github.com/user-attachments/assets/b819bece-3efd-496e-ba68-514c2a733f7d" />
+
 # Disclosure & Attribution
 
 I am not affiliated with Helium or imput
