@@ -17,9 +17,8 @@ This project was originally created for my personal use. However, as some have a
 While you can open the `index.html` directly, it is **better to host it locally** (e.g., using a Python web server: `python -m http.server`).
 
 ### Why is there no `config.json`?
-I decided against using a separate `config.json` to keep things simple for standard use. Using external JSON files would require you to run a web server to avoid browser security restrictions. By keeping the configuration inside `index.html`, you can use the file normally without extra setup, also explains why i did not build the project with its depends and why i'm using their cdns.
+I decided against using a separate `config.json` to keep things simple for standard use in this public release. Using external JSON files would require you to run a web server to avoid browser security restrictions. By keeping the configuration inside `index.html`, you can use the file normally without extra setup, also explains why i did not build the project with its depends and why i'm using their cdns. (if you are a bit savy then you know how to easy build this yourself thats why this is opensource).
 
 ### Integration with Helium
-In the Helium settings on startup, you can point directly to the `index.html` file in this folder. All of your history and settings are stored safely in the browser's `localStorage`.
-
-If you want this page to open every time you click the **"+" (New Tab)** button in your browser, you can use a redirect extension like Custom New Tab URL i think (not fully sure..)
+In the Helium settings on startup, you can point directly to the `index.html` file in this folder. All of your history and settings are stored in `localStorage`.
+OPTIONAL: If you want this page to open every time you click the **"+" (New Tab)** button in your browser, you can use a redirect extension like New Tab Redirect or Custom New Tab URL.
