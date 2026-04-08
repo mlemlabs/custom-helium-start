@@ -7,8 +7,8 @@ I am not affiliated with Helium or imput
 This project was originally created for my personal use. However, as some have asked for a copy, I am sharing it here because... why not? Enjoy!
 
 - All references to "Helium" belong to Helium.
-- All rights are reserved to Helium bless those boys consider sponsoring them (https://helium.computer/sponsor).
-- I am not "imput" nor affiliated with them.
+- All rights are reserved to Helium, you can support them via (https://helium.computer/sponsor).
+- I am not part of "imput/hellium" nor am i affiliated with them.
 
 ---
 
