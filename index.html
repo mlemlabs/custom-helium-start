@@ -17,7 +17,8 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
 
     <script>
         tailwind.config = {
@@ -44,31 +45,37 @@
 
     <main class="flex-1 flex flex-col items-center justify-center px-6 relative z-10">
 
-        <canvas id="app-3d" class="mb-6 opacity-95 pointer-events-none select-none"></canvas>
+        <canvas id="app-3d" class="mb-6 opacity-95 pointer-events-none select-none entrance-reveal"></canvas>
 
-        <div class="flex flex-col items-center mb-10 text-center pointer-events-none select-none">
+        <div class="flex flex-col items-center mb-10 text-center pointer-events-none select-none entrance-reveal"
+            style="animation-delay: 0.08s;">
             <h1 id="clock" class="text-[6rem] md:text-[8rem] font-normal tracking-tight text-white mb-2 leading-none">
                 00:00</h1>
             <p id="date" class="text-[1.15rem] md:text-[1.25rem] font-medium leading-relaxed max-w-xl">
                 Monday, January 1</p>
         </div>
 
-        <div class="w-full max-w-[32rem] relative flex flex-col">
-            <form id="search-form" class="w-full relative z-20">
-                <div class="search-container relative flex items-center">
-                    <svg class="absolute left-5 w-5 h-5 text-[#6b7280] pointer-events-none z-20" fill="none"
+        <div class="search-wrapper w-full max-w-[32rem] relative flex flex-col entrance-reveal"
+            style="animation-delay: 0.16s;">
+            <form id="search-form" class="w-full relative z-20" role="search">
+                <div class="search-container relative flex items-center" role="combobox" aria-haspopup="listbox"
+                    aria-expanded="false" id="search-combobox">
+                    <svg class="search-icon absolute left-5 w-5 h-5 text-[#6b7280] pointer-events-none z-20" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round"
-                        stroke-linejoin="round">
+                        stroke-linejoin="round" aria-hidden="true">
                         <circle cx="11" cy="11" r="8"></circle>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
+                    <div class="search-loader absolute left-5 w-5 h-5 z-20 hidden" aria-hidden="true"></div>
 
                     <input type="text" id="search-input" placeholder="Search or !bang away"
                         class="w-full py-4 pl-14 pr-6 rounded-xl search-input text-lg font-medium relative z-10"
-                        autocomplete="off" autofocus>
+                        autocomplete="off" autofocus aria-label="Search" aria-autocomplete="list"
+                        aria-controls="suggestions-list" aria-activedescendant="">
                 </div>
 
-                <ul id="suggestions-list" class="suggestions-dropdown m-0 p-0 list-none"></ul>
+                <ul id="suggestions-list" class="suggestions-dropdown m-0 p-0 list-none" role="listbox"
+                    aria-label="Search suggestions"></ul>
             </form>
 
             <div id="tab-tray"
@@ -97,7 +104,7 @@
                     duckduckgo: 'https://duckduckgo.com/?q=',
                     ecosia: 'https://www.ecosia.org/search?q=',
                     brave: 'https://search.brave.com/search?q=',
-                    bing: 'https://www.bing.com/search?q='
+                    kagi: 'https://kagi.com/search?q='
                 }
             },
             // Shortcuts you can type (e.g., "!yt cat videos"). 
@@ -119,7 +126,6 @@
                 { trigger: '!py', name: 'Python', url: 'https://docs.python.org/3/search.html?q={q}' },
                 { trigger: '!npm', name: 'NPM', url: 'https://www.npmjs.com/search?q={q}' },
                 { trigger: '!duck', name: 'DuckDuckGo', url: 'https://duckduckgo.com/?q={q}' },
-                { trigger: '!bing', name: 'Bing', url: 'https://www.bing.com/search?q={q}' },
                 { trigger: '!imdb', name: 'IMDb', url: 'https://www.imdb.com/find?q={q}' },
                 { trigger: '!fb', name: 'Facebook', url: 'https://www.facebook.com/search/top/?q={q}' },
                 { trigger: '!ig', name: 'Instagram', url: 'https://www.instagram.com/explore/tags/{q}/' },
