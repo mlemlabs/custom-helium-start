@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <!-- Transparent "Helium X" - matching our 3D Logo spindle -->
+    <g transform="translate(50,50)">
+        <g stroke="white" stroke-width="12" stroke-linecap="round">
+            <line x1="-35" y1="0" x2="35" y2="0" transform="rotate(0)" />
+            <line x1="-35" y1="0" x2="35" y2="0" transform="rotate(45)" />
+            <line x1="-35" y1="0" x2="35" y2="0" transform="rotate(90)" />
+            <line x1="-35" y1="0" x2="35" y2="0" transform="rotate(135)" />
+        </g>
+        <!-- Subtle Glow Core -->
+        <circle r="10" fill="#afbeff" opacity="0.9" />
+    </g>
+</svg>
