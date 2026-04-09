@@ -1,4 +1,4 @@
-<img width="1385" height="933" alt="image" src="https://github.com/user-attachments/assets/b819bece-3efd-496e-ba68-514c2a733f7d" />
+<img src="https://github.com/user-attachments/assets/e3a74da4-8c2f-4b6f-923d-48b2cea1c407" width="100%" style="border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);" />
 
 # Disclosure & Attribution
 
