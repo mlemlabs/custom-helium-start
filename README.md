@@ -16,9 +16,6 @@ This project was originally created for my personal use. However, as some have a
 
 While you can open `index.html` directly in your browser, it is **better to host it locally** (e.g., using a Python web server: `python -m http.server`) for optimal performance and security.
 
-### Why is there no config.json?
-I decided against using a separate `config.json` to keep things simple for this public release. Using external JSON files would require a web server to bypass certain browser security restrictions. By keeping the configuration inside a standard JavaScript file, the project works immediately without extra setup.
-
 ### Integration with Helium
 
 Set your custom new tab page by navigating to:
