@@ -21,16 +21,23 @@ I decided against using a separate `config.json` to keep things simple for this 
 
 ### Integration with Helium
 
-In the Helium settings (`helium://settings/onStartup`), you can configure the app to open this project on startup:
+Set your custom new tab page by navigating to:
+`helium://flags/#custom-ntp`
+From there, point it to your project’s `index.html` file (either locally or hosted url).
 
-1. Click **"Add a new page"**.
-2. Set the **Site URL** to the path of the `index.html` file in this folder.
-   
-   **Example:**
-   `C:\Users\User\Documents\Project Helium\index.html`
-   
-   Or if you are hosting with Python:
-   `http://localhost:8000`
+Next, configure startup behavior in:
+helium://settings/onStartup
+
+1. Click "Add a new page"
+2. Enter the Site URL pointing to your project
+
+Examples:
+
+- Local file:
+  C:\Users\User\Documents\Project Helium\index.html
+
+- Hosted locally (e.g. Python server):
+  http://localhost:8000
 
 3. To customize your dashboard, open `assets/js/config.js` in a text editor. You can easily change your default search engine, colors, and add custom !bang shortcuts without editing the core code.
 
