@@ -14,8 +14,7 @@ This project was originally created for my personal use. However, as some have a
 
 ## Usage & Hosting
 
-While you can open `index.html` directly in your browser, it is **better to host it locally** (e.g., using a Python web server: `python -m http.server`) for optimal performance and security.
-
+While you can open `index.html` directly in your browser, it is **better to host it locally** (e.g., using a Python web server: `python -m http.server`) if you are a bit savy but its not a must.
 ### Integration with Helium
 
 Set your custom new tab page by navigating to:
