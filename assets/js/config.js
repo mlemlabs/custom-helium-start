@@ -5,25 +5,6 @@
  * No coding experience required! Just change the values below.
  */
 
-tailwind.config = {
-    theme: {
-        extend: {
-            colors: {
-                app: {
-                    // These define the core colors used in the layout (mostly the 3D logo area)
-                    accent: '#152671',
-                    accentMid: '#1b2c78',
-                    accentLight: '#5669bd',
-                    elevated: 'rgba(175, 190, 255, var(--tw-bg-opacity, 1))',
-                }
-            },
-            fontFamily: {
-                // Change "Instrument Sans" to any Google Font you've linked in index.html
-                sans: ['"Instrument Sans"', 'system-ui', 'sans-serif'],
-            }
-        }
-    }
-};
 
 window.CONFIG = {
     animation: {

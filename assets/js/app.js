@@ -10,7 +10,7 @@ const SafeStorage = {
     set: (key, value) => {
         try {
             localStorage.setItem(SafeStorage.prefix + key, JSON.stringify(value));
-        } catch (e) {}
+        } catch (e) { }
     }
 };
 
@@ -24,9 +24,9 @@ const init3D = () => {
     const canvas = document.getElementById('app-3d');
     if (!canvas) return;
 
-    const renderer = new THREE.WebGLRenderer({ 
-        canvas, 
-        alpha: true, 
+    const renderer = new THREE.WebGLRenderer({
+        canvas,
+        alpha: true,
         antialias: true,
         powerPreference: 'low-power',
         precision: 'mediump'
@@ -80,12 +80,12 @@ const init3D = () => {
     let startTime = null;
 
     const animate3D = (time) => {
-        if (isPaused) return; 
+        if (isPaused) return;
         if (!startTime) startTime = time;
-        
+
         const elapsed = (time - startTime) / 1000;
         const entranceDuration = 1.2;
-        
+
         if (elapsed < entranceDuration) {
             const t = elapsed / entranceDuration;
             const scale = 1 + 0.1 * Math.sin(t * Math.PI) * (1 - t);
@@ -165,8 +165,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 const img = document.createElement('img');
                 img.src = `https://www.google.com/s2/favicons?domain=${domain}&sz=64`;
                 img.className = 'w-5 h-5 rounded-full shadow-lg';
+                img.alt = 'Search engine logo';
                 bangIndicator.appendChild(img);
-                
+
                 bangIndicator.style.opacity = '1';
                 bangIndicator.style.transform = 'scale(1)';
 
@@ -211,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const now = new Date();
         const h = String(now.getHours()).padStart(2, '0');
         const m = String(now.getMinutes()).padStart(2, '0');
-        
+
         if (clockEl) {
             clockEl.textContent = '';
             clockEl.appendChild(document.createTextNode(h));
@@ -311,9 +312,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const img = document.createElement('img');
                 img.src = `https://www.google.com/s2/favicons?domain=${domain}&sz=64`;
                 img.className = 'rounded-full shadow-md opacity-0 transition-opacity duration-300 pointer-events-none icon-shortcut';
-                
+                img.alt = `${item.name} icon`;
+
                 img.onload = () => img.classList.remove('opacity-0');
-                
+
                 img.onerror = () => {
                     const fallback = document.createElement('div');
                     fallback.className = 'w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-[8px] uppercase font-bold';
@@ -337,7 +339,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const renderSuggestions = (suggestions, isBangs = false) => {
         state.currentSuggestions = suggestions;
         state.selectedIndex = -1;
-        
+
         while (suggestionsList.firstChild) suggestionsList.removeChild(suggestionsList.firstChild);
 
         if (suggestions.length === 0) {

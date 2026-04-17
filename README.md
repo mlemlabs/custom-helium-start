@@ -39,5 +39,13 @@ Examples:
 
 All your search history and settings are stored locally in your browser's `localStorage`.
 
-### Optional: Redirect Extension
-If you want this page to open every time you click the **"+" (New Tab)** button in your browser, you can use a redirect extension such as *New Tab Redirect* or *Custom New Tab URL*.
+---
+
+## Getting Started
+
+If you want the best performance and a ready-to-use version without any setup, you can simply **download the latest release** from the GitHub releases page.
+
+For those who want to customize the source:
+1.  To customize your dashboard, open `assets/js/config.js` in a text editor.
+2.  You can easily change your default search engine, colors, and add custom !bang shortcuts without editing the core code.
+3.  All your search history and settings are stored locally in your browser's `localStorage`.

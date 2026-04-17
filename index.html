@@ -4,21 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A minimalist, high-performance search dashboard with 3D dithered aesthetics.">
+    <meta name="description" content="A minimalist, Helium based dashboard.">
     <meta name="theme-color" content="#152671">
     <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self' 'unsafe-eval' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://suggestqueries.google.com; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://suggestqueries.google.com; child-src 'none'; object-src 'none';">
+        content="default-src 'self'; script-src 'self' 'unsafe-eval' https://suggestqueries.google.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; connect-src 'self' https://suggestqueries.google.com; child-src 'none'; object-src 'none';">
     <title>Helium New Page</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://suggestqueries.google.com">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
+    <script src="assets/js/three.min.js"></script>
     <script src="assets/js/config.js"></script>
 </head>
 
@@ -33,12 +27,12 @@
         <div class="flex flex-col items-center mb-10 text-center pointer-events-none select-none">
             <h1 id="clock"
                 class="text-[6rem] md:text-[8rem] font-normal tracking-tight text-white mb-2 leading-none entrance-reveal"
-                style="animation-delay: 0.25s;">00:00</h1>
+                style="animation-delay: 0.1s;">00:00</h1>
             <p id="date" class="text-[1.15rem] md:text-[1.25rem] font-medium leading-relaxed max-w-xl entrance-reveal"
-                style="animation-delay: 0.35s;">Monday, January 1</p>
+                style="animation-delay: 0.2s;">Monday, January 1</p>
         </div>
         <div class="search-wrapper w-full max-w-[32rem] relative flex flex-col entrance-reveal"
-            style="animation-delay: 0.5s;">
+            style="animation-delay: 0.3s;">
             <form id="search-form" class="w-full relative z-20" role="search">
                 <div class="search-container relative flex items-center" role="combobox" aria-haspopup="listbox"
                     aria-expanded="false" id="search-combobox">
@@ -54,7 +48,7 @@
                         aria-hidden="true"></div>
                     <input type="text" id="search-input" placeholder="Search or !bang away"
                         class="w-full py-4 pl-14 pr-6 rounded-xl search-input text-lg font-medium relative z-10"
-                        autocomplete="off" autofocus aria-label="Search" aria-autocomplete="list"
+                        autocomplete="off" autofocus aria-label="Search the web" aria-autocomplete="list"
                         aria-controls="suggestions-list" aria-activedescendant="">
                 </div>
                 <ul id="suggestions-list" class="suggestions-dropdown m-0 p-0 list-none" role="listbox"
