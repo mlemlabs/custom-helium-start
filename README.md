@@ -15,14 +15,14 @@ This project was originally created for my personal use. However, as some have a
 ## Usage & Hosting
 
 While you can open `index.html` directly in your browser, it is **better to host it locally** (e.g., using a Python web server: `python -m http.server`) if you are a bit savy but its not a must.
-### Integration with Helium
+### 1. Integration with Helium
 
 Set your custom new tab page by navigating to:
 `helium://flags/#custom-ntp`
 From there, point it to your project’s `index.html` file (either locally or hosted url).
 
 Next, configure startup behavior in:
-helium://settings/onStartup
+`helium://settings/onStartup`
 
 1. Click "Add a new page"
 2. Enter the Site URL pointing to your project
@@ -39,6 +39,17 @@ Examples:
 
 All your search history and settings are stored locally in your browser's `localStorage`.
 
+### 2. Extension Installation
+
+Since this is an unpacked extension, you'll need to load it manually in Helium via Developer Mode.
+
+1. Download this repository as a `.zip` file (or grab the packaged `.zip` if provided) and extract it to a folder on your computer.
+2. Open Helium and navigate to the Extensions page: `helium://extensions`.
+3. In the top right corner, toggle **Developer mode** to **ON**.
+4. Click the **Load unpacked** button that appears in the top left.
+5. Select the folder where you extracted the code (the folder containing `manifest.json`).
+6. The extension is now installed! Open a new tab to see your new Helium dashboard.
+
 ---
 
 ## Getting Started
@@ -47,5 +58,6 @@ If you want the best performance and a ready-to-use version without any setup, y
 
 For those who want to customize the source:
 1.  To customize your dashboard, open `assets/js/config.js` in a text editor.
-2.  You can easily change your default search engine, colors, and add custom !bang shortcuts without editing the core code.
+2.  You can easily change your default search engine, colors, and add custom `!bang` shortcuts without editing the core code.
+4.  **For extension users** - after saving changes, go back to `helium://extensions` and click the **Refresh** icon on the extension card to apply them.
 3.  All your search history and settings are stored locally in your browser's `localStorage`.
