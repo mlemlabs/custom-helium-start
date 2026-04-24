@@ -9,7 +9,7 @@ I am not affiliated with Helium or Imput. This project was originally created fo
 ---
 
 ## Usage & Hosting
-You can open `index.html` directly in your browser, but hosting it locally is recommended (e.g. `python -m http.server`) — though it's not required.
+You can open `index.html` directly in your browser.
 
 ### Integration with Helium
 
